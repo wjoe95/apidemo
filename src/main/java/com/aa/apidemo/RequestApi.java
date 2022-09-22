@@ -11,7 +11,6 @@ public class RequestApi {
 
     @Scheduled(fixedDelay=5000)
     public void scheduledApiRequest() {
-        System.out.println("Entered scheduledApiRequest");
         RestTemplate restTemplate = new RestTemplate();
         String uri = "https://api.weather.gov/alerts/active?area=TX";
         String result = restTemplate.getForObject(uri, String.class);
